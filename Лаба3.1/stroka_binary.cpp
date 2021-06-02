@@ -5,6 +5,7 @@ stroka_binary::stroka_binary() : stroka() {
 }
 
 stroka_binary::stroka_binary(int number, int max_size) {
+	this->max_size = max_size;
 	int n = number, size = 0;
 	// Получение размера двоичного числа
 	while (n > 0) {

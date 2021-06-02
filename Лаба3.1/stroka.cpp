@@ -36,9 +36,6 @@ void stroka::change(const char* marka) {	// Изменение строки объекта
 		this->max_size *= 2;
 		delete[] this->marka;
 		this->marka = new char[max_size];
-		//std::cout << "Максимальный размер строки увеличен" << endl;
-		//cout << size << endl;
-		//cout << max_size << endl;
 	}
 	strcpy(this->marka, marka);		// Копирование в поле this->marka аргумента marka
 	this->size = lenght;
@@ -109,11 +106,11 @@ stroka stroka::operator+(const stroka & other) {	// Оператор сложения
 	temp.marka = new char[temp.size];
 	//temp.marka[0] = '\0';
 
-	for (int i = 0; i < this->size; i++) {
+	for (int i = 0; i < this->size - 1; i++) {
 		temp.marka[i] = this->marka[i];
 	}
 
-	for (int i = this->size, j = 0; i < temp.size; i++, j++) {
+	for (int i = this->size - 1, j = 0; i < temp.size; i++, j++) {
 		temp.marka[i] = other.marka[j];
 	}
 

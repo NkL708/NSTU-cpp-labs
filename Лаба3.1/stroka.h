@@ -37,4 +37,5 @@ public:
 	friend ifstream& operator>>(ifstream& is, stroka& p);		// Запись объекта в файл
 	ostream& writeToBin(ostream& stream);
 	istream& readFromBin(istream& stream);
+
 };
