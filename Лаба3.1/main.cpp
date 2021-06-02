@@ -22,7 +22,7 @@ int main() {
 	*/
 
 	setlocale(LC_ALL, "Rus");
-
+	cout << "Git works!" << endl;
 	stroka_binary a1(123, 14);
 	stroka a2("qwerty", 8);
 	stroka a3("Some text", 11);
