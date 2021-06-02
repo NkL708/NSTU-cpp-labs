@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -15,7 +16,7 @@ public:
 	stroka();										// Конструктор по умолчанию
 	stroka(const char* marka, int max_size);		// Конструктор с параметрами
 	~stroka();										// Деструктор
-	stroka(const stroka &other);					// Конструктор копирования
+	stroka(const stroka& other);					// Конструктор копирования
 	void change(const char* marka);					// Изменение строки объекта
 	void print();									// Вывод строки
 	void find_podstroka(const char* podstroka);		// Нахождение подстроки
@@ -29,7 +30,7 @@ public:
 	char& operator[](int index);					// Перегрузка оператора индексирования
 	void sum_of_2(stroka& a, stroka& b);			// Метод, который складывает два объекта
 	friend stroka sum_of_2(stroka& a, stroka& b);	// Дружественная функция, которая складывает два объекта
-	
+
 	// Лаба 3
 	friend ostream& operator<<(ostream& os, stroka& p);	// Вывод объекта в консоль
 	friend istream& operator>>(istream& is, stroka& p);			// Ввод объекта с консоли
@@ -38,4 +39,11 @@ public:
 	ostream& writeToBin(ostream& stream);
 	istream& readFromBin(istream& stream);
 
+	// Геттеры и сеттеры
+	char* getMarka() { return marka; }
+	void setMarka(char* marka) { this->marka = marka; }
+	int getMax_size() { return max_size; }
+	void setMax_size(int max_size) { this->max_size = max_size; }
+	int getSize() { return size; }
+	void setSize(int size) { this->size = size; }
 };

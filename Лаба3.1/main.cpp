@@ -1,7 +1,8 @@
-﻿#include "stroka_binary.h"
+﻿#include "stack.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
+	/*
 	stroka_binary a1(123, 14);
 	stroka_binary a2(228, 20);
 	stroka_binary a3;
@@ -12,5 +13,9 @@ int main() {
 	a1.print_sym(5);
 	a1.print();
 	(a1 + a2).print();
+	*/
+
+	List lst1, lst2, result;
+
 	return 0;
 }

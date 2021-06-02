@@ -139,10 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="stack.h" />
     <ClInclude Include="stroka_binary.h" />
     <ClInclude Include="stroka.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="stack.cpp" />
     <ClCompile Include="stroka.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stroka_binary.cpp" />

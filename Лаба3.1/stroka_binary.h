@@ -1,3 +1,4 @@
+#pragma once
 #include "stroka.h"
 
 class stroka_binary : public stroka {
