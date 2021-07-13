@@ -43,8 +43,9 @@ void stroka::change(const char* marka) {	// Изменение строки объекта
 
 void stroka::print() {		// Вывод строки
 	setlocale(LC_ALL, "Rus");
-	cout << this->marka;
-	cout << " всего объектов - " << this->count;
+	for (int i = 0; i < size; i++) {
+		cout << marka[i];
+	}
 	cout << endl;
 }
 

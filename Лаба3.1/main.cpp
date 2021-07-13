@@ -1,7 +1,9 @@
-﻿#include "stack.h"
+﻿#include "queue.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
+	// Дописать дем. программы для 1-3 лаб, если преподаватель попросит
+	// 4 Лаба
 	/*
 	stroka_binary a1(123, 14);
 	stroka_binary a2(228, 20);
@@ -14,8 +16,21 @@ int main() {
 	a1.print();
 	(a1 + a2).print();
 	*/
-
+	// 5 Лаба
+	/*
+	stroka_binary a(16, 10);
+	stroka_binary b(32, 10);
+	stroka_binary c(2, 10);
+	stroka d("Hello", 10);
 	List lst1, lst2, result;
+	lst1.add(a);
+	lst1.add(b);
+	lst1.add(c);
+	lst1.add(d);
+	a.virtual_foo();
+	d.virtual_foo();
+	lst1.print();
+	*/
 
 	return 0;
 }

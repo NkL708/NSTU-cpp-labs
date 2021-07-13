@@ -39,6 +39,11 @@ public:
 	ostream& writeToBin(ostream& stream);
 	istream& readFromBin(istream& stream);
 
+	// Лаба 5 (демонстрация вирутальной функции)
+	virtual void virtual_foo() {
+		cout << "Реализация функции материнского класса" << endl;
+	}
+
 	// Геттеры и сеттеры
 	char* getMarka() { return marka; }
 	void setMarka(char* marka) { this->marka = marka; }

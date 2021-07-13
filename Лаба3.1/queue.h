@@ -5,20 +5,23 @@ class List		// Список
 {
 public:
 	List();
+	void remove();
 	void remove(int index);
-	void add(stroka_binary elem);
-	void add(stroka_binary elem, int index);
+	void add(stroka elem);
+	void add(stroka elem, int index);
 	void print();
 
 	class Elem {		// Элемент списка
 
 	public:
 		Elem* pNext;
-		stroka_binary data;
+		Elem* pPrevious;
+		stroka data;
 
-		Elem(stroka_binary data, Elem* pNext = nullptr) {
+		Elem(stroka data, Elem* pNext = nullptr, Elem* pPrevious = nullptr) {
 			this->data = data;
 			this->pNext = pNext;
+			this->pPrevious = pPrevious;
 		}
 	};
 	int size;
