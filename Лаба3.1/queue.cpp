@@ -6,27 +6,38 @@ List::List() {
 }
 
 void List::remove(int index) {		// Убрать элемент по индексу
-	Elem* current = head;
-	if (index == 0) {
-		delete[] head;
-	}
-	if (index = this->size) {
-		for (int i = 0; i < index - 1; i++) {
-			current = current->pNext;
+	try
+	{
+		Elem* current = head;
+		if (index == 0) {
+			delete[] head;
 		}
-		Elem* toDelete = current->pNext;
-		current->pNext = head;
-		delete toDelete;
-	}
-	else {
-		for (int i = 0; i < index - 1; i++) {
-			current = current->pNext;
+		if (index == this->size) {
+			for (int i = 0; i < index - 1; i++) {
+				current = current->pNext;
+			}
+			Elem* toDelete = current->pNext;
+			current->pNext = head;
+			delete toDelete;
 		}
-		Elem* toDelete = current->pNext;
-		current->pNext = toDelete->pNext;
-		delete toDelete;
+		if (index > this->size || index < 0) {
+			exception ex;
+			throw ex;
+		}
+		else {
+			for (int i = 0; i < index - 1; i++) {
+				current = current->pNext;
+			}
+			Elem* toDelete = current->pNext;
+			current->pNext = toDelete->pNext;
+			delete toDelete;
+		}
+		size--;
 	}
-	size--;
+	catch (const exception& ex)
+	{
+		cout << "Выход за пределы!" << endl;
+	}
 }
 
 void List::remove() { 		// Удаление последнего элемента очереди
@@ -50,20 +61,31 @@ void List::add(stroka elem) {		// Добавить элемент в конец очереди
 }
 
 void List::add(stroka elem, int index) {		// Добавить элемент в конец очереди
-	if (index == 0) {
-		Elem* temp = new Elem(elem);
-		temp->pNext = head;
-	}
-	else {
-		Elem* current = head;
-		while (index - 1 != 0) {
-			current = current->pNext;
-			index--;
+	try
+	{
+		if (index == 0) {
+			Elem* temp = new Elem(elem);
+			temp->pNext = head;
 		}
-		Elem* temp = new Elem(elem);
-		temp->pNext = current->pNext;
-		current->pNext = temp;
-		size++;
+		if (index > this->size || index < 0) {
+			exception ex;
+			throw ex;
+		}	
+		else {
+			Elem* current = head;
+			while (index - 1 != 0) {
+				current = current->pNext;
+				index--;
+			}
+			Elem* temp = new Elem(elem);
+			temp->pNext = current->pNext;
+			current->pNext = temp;
+			size++;
+		}
+	}
+	catch (const exception& ex)
+	{
+		cout << "Выход за пределы!" << endl;
 	}
 }
 

@@ -15,13 +15,11 @@ public:
 
 	public:
 		Elem* pNext;
-		Elem* pPrevious;
 		stroka data;
 
 		Elem(stroka data, Elem* pNext = nullptr, Elem* pPrevious = nullptr) {
 			this->data = data;
 			this->pNext = pNext;
-			this->pPrevious = pPrevious;
 		}
 	};
 	int size;

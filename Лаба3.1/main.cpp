@@ -22,15 +22,26 @@ int main() {
 	stroka_binary b(32, 10);
 	stroka_binary c(2, 10);
 	stroka d("Hello", 10);
-	List lst1, lst2, result;
+	List lst1;
 	lst1.add(a);
 	lst1.add(b);
 	lst1.add(c);
 	lst1.add(d);
-	a.virtual_foo();
-	d.virtual_foo();
+	//a.virtual_foo();
+	//d.virtual_foo();
 	lst1.print();
 	*/
-
+	// 6 Лаба
+	
+	List lst1;
+	stroka a("Hello", 6);
+	stroka b("world", 6);
+	stroka c("again", 6);
+	lst1.add(a);
+	lst1.add(b);
+	lst1.add(c, 5);
+	lst1.remove(-1);
+	lst1.print();
+	
 	return 0;
 }
