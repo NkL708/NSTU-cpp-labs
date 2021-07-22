@@ -142,6 +142,7 @@
     <ClInclude Include="queue.h" />
     <ClInclude Include="stroka_binary.h" />
     <ClInclude Include="stroka.h" />
+    <ClInclude Include="template.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="queue.cpp" />

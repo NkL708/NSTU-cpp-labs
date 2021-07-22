@@ -1,8 +1,9 @@
 ﻿#include "queue.h"
+#include "template.h"
 
 int main() {
 	setlocale(LC_ALL, "Rus");
-	// Дописать дем. программы для 1-3 лаб, если преподаватель попросит
+	// Дописать дем. программы для 1-3 лаб, если преподаватель попросит (но я сдавал в конце прошлого семестра)
 	// 4 Лаба
 	/*
 	stroka_binary a1(123, 14);
@@ -32,7 +33,7 @@ int main() {
 	lst1.print();
 	*/
 	// 6 Лаба
-	
+	/*
 	List lst1;
 	stroka a("Hello", 6);
 	stroka b("world", 6);
@@ -42,6 +43,15 @@ int main() {
 	lst1.add(c, 5);
 	lst1.remove(-1);
 	lst1.print();
-	
+	*/
+	// Лаба 7
+	//stack<double> stack(4, 2.5, 3.0, 5.3, 5.1);
+	//stack<int> stack(4, 2, 3, 5, 8);
+	//stack<const char*> stack(3, "str1", "str2", "str3");
+	//stack.print();
+	//stack.add(2.23);
+	//stack.remove();
+	//stack.remove();
+	//stack.print();
 	return 0;
 }
